@@ -31,11 +31,11 @@
     padding: 44px 0;
     color: white;
     text-shadow: 1px 1px 1px black;
-    background-image: url(/Users/jessicayoungs/Desktop/logo.png);
+    background-image: url(ica5/logo.png);
     filter: drop-shadow(4px 4px black);
 }
 article {
-    background: url(/Users/jessicayoungs/Desktop/top-image.png) top no-repeat, url(/Users/jessicayoungs/Desktop/bottom-image.png) bottom no-repeat, linear-gradient(0deg,rgba(0,0,0,0.3)0%,rgba(0,0,0,0)12%,rgba(0,0,0,0)47%,rgba(0,0,0,0)86%,rgba(0,0,0,0.3)100%);
+    background: url(ica5/top-image.png) top no-repeat, url(ica5/bottom-image.png) bottom no-repeat, linear-gradient(0deg,rgba(0,0,0,0.3)0%,rgba(0,0,0,0)12%,rgba(0,0,0,0)47%,rgba(0,0,0,0)86%,rgba(0,0,0,0.3)100%);
     border-top: 1mm solid red;
     border-bottom: 1mm solid red;
 }
