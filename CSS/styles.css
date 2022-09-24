@@ -1,0 +1,26 @@
+html {
+    background: #FDE4F1;
+    color: #383537;
+    font-family: 'Average';
+    font-style: normal; 
+}
+h1 {
+    font-family: 'Average';
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 32px;
+}
+a:link {
+    color:#5C9ABD
+}
+a:visited {
+    color: #7CAB7B;
+  }
+a:hover {
+    text-decoration: none; 
+    color: #8dbbd4;
+  }
+hr {
+    display: block;
+    color: #7CAB7B;
+}

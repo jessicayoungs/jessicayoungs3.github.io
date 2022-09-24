@@ -31,11 +31,11 @@
     padding: 44px 0;
     color: white;
     text-shadow: 1px 1px 1px black;
-    background-image: url(img/logo.png);
+    background-image: url(../img/logo.png);
     filter: drop-shadow(4px 4px black);
 }
 article {
-    background: url(img/top-image.png) top no-repeat, url(img/bottom-image.png) bottom no-repeat, linear-gradient(0deg,rgba(0,0,0,0.3)0%,rgba(0,0,0,0)12%,rgba(0,0,0,0)47%,rgba(0,0,0,0)86%,rgba(0,0,0,0.3)100%);
+    background: url(../img/top-image.png) top no-repeat, url(../img/bottom-image.png) bottom no-repeat, linear-gradient(0deg,rgba(0,0,0,0.3)0%,rgba(0,0,0,0)12%,rgba(0,0,0,0)47%,rgba(0,0,0,0)86%,rgba(0,0,0,0.3)100%);
     border-top: 1mm solid red;
     border-bottom: 1mm solid red;
 }
