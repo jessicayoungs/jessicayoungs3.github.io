@@ -1,5 +1,5 @@
-@media only screen and (max-width:600px) {
-}
+@media (max-width:400px){
+
 html {
     background: #FDE4F1;
     color: #383537;
@@ -20,7 +20,7 @@ h2 {
     font-family: 'Average';
     font-style: normal; 
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
 }
 a:link {
     color:#306786
@@ -69,3 +69,4 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 1px;
   }
+}
