@@ -6,7 +6,17 @@ html {
     font-family: 'Average';
     font-style: normal; 
 }
+img {
+    max-width: 100%;
+    display: block;
+}
 h1 {
+    font-family: 'Average';
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 32px;
+}
+h2 {
     font-family: 'Average';
     font-style: normal; 
     font-weight: 400;
@@ -45,4 +55,17 @@ nav {
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
+  }
+  .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+  }
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
   }
