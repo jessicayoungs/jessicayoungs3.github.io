@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>ica 8</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../My Website/aboutme.html">About Me</a>
+          </li>
+          <li>
+            <a href="../My Website/projects.html">Projects</a>
+          </li>
+          <li>
+            <a href="../My Website/contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="../ica8/ica8.html">ica 8</a>
+          </li>
+        </ul>
+      </nav> 
+
+      <p>Hello <span id="firstname"></span></p>
+      <p id="result"></p>
+
+      <script>
+        first = prompt("Enter your first name");
+        document.getElementById('firstname').innerHTML = first;
+        num1 = prompt("What is 1st number");
+        num2 = prompt("What is 2nd number");
+        answer = parseInt(num1) + parseInt(num2);
+        document.getElementById("result").innerHTML = "The sum is " + answer;
+      </script>
+
+
+</body>
+</html>
