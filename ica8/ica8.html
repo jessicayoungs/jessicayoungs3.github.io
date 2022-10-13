@@ -28,7 +28,17 @@
 
       <p>Hello <span id="firstname"></span></p>
       <p id="result"></p>
+      <p>What is your favorite food?</p>
+      <form id="form1">
+        <input type="radio" name="youroption" value="Option 1" id="Sushi" /> <label for="Sushi">Sushi</label><br>
+        <input type="radio" name="youroption" value="Option 2" id="Pizza" /> <label for="Pizza">Pizza</label><br>
+        <input type="radio" name="youroption" value="Option 3" id="Tacos" /> <label for="Tacos">Tacos</label><br>
+        <input type="radio" name="youroption" value="Option 4" id="Burgers" /> <label for="Burgers">Burgers</label><br>
+        <input type="submit" value="Submit"
+      </form>
+        <p id="answer"></p>
 
+   
       <script>
         first = prompt("Enter your first name");
         document.getElementById('firstname').innerHTML = first;
@@ -36,8 +46,12 @@
         num2 = prompt("What is 2nd number");
         answer = parseInt(num1) + parseInt(num2);
         document.getElementById("result").innerHTML = "The sum is " + answer;
+        document.getElementById("form1").onsubmit=function() {
+        option = document.querySelector('input[name = "youroption"]:checked').value;
+        document.getElementById("answer").innerHTML = option;
+return false; 
+     }
       </script>
-
 
 </body>
 </html>
