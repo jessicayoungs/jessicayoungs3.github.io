@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Quotes</title>
+    <style>
+        html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, "sans-serif";
+    background-color: #c9bd95;
+  }
+  
+  .app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  }
+  
+  header {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ebebeb;
+  }
+  
+  .quotes {
+    padding: 20px 50px;
+    min-height: 200px;
+  }
+  
+  .quote-text {
+    padding-bottom: 20px;
+    font-size: 25px;
+    color: black;
+  }
+  
+  .controls {
+    width: 100%;
+    padding: 20px 50px;
+  }
+  
+  .button {
+    display: block;
+    color: #black;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  }
+  
+  .cat {
+    background-color: #8ccff9;
+    text-decoration: none;
+  }
+  
+  .cat:hover {
+    background-color: #1e7fbb;
+  }
+  
+  .new-quote {
+    background-color: #df8fd9;
+    margin-bottom: 15px;
+  }
+  
+  .new-quote:hover {
+    background-color: #841a82;
+  }
+  
+  .new-quote:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+  }
+  
+
+
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>Random Coding Quotes and Cat Facts</header>
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+        </section>
+        <section class="controls">
+          <button type="button" id="js-new-quote" class="new-quote button">
+            Generate a new quote
+          </button>
+          <a class="cat button" id="js-cat" target="_blank" rel="noreferrer">Generate a new cat fact</a>
+        </section>
+      </div>
+      <script>
+   window.addEventListener('load', getQuote);
+
+const quoteButton = document.querySelector('.new-quote');
+quoteButton.addEventListener('click', getQuote);
+
+const endpoint = 'http://quotes.stormconsultancy.co.uk/random.json';
+
+async function getQuote(){
+    console.log('test click worked');
+    let text = await fetch(endpoint);
+    let response = await text.text();
+
+    let json_response = JSON.parse(response);
+    console.log (json_response);
+    console.log(json_response['quote']);
+    //.then(text=> text.text());
+    //.then(y=> myDisplay(y));
+    //console.log(text['message']);
+
+    displayQuote (json_response['quote']);
+}
+function displayQuote(x){
+    //const quoteBox = document.querySelector('#js-quote-text');
+    //console.log('display quote working');
+
+    //const textMessage = document.createTextNode(x);
+    //quoteBox.appendChild(textMessage);
+    document.getElementById('js-quote-text').textContent = x;
+}
+
+
+window.addEventListener('load', getQuote);
+
+const catButton = document.querySelector('.cat');
+catButton.addEventListener('click', getQuote);
+
+const endpoint = 'https://catfact.ninja/fact';
+
+async function getQuote(){
+    console.log('test click worked');
+    let text = await fetch(endpoint);
+    let response = await text.text();
+
+    let json_response = JSON.parse(response);
+    console.log (json_response);
+    console.log(json_response['fact']);
+   
+
+    displayQuote (json_response['fact']);
+}
+function displayQuote(x){
+   
+    document.getElementById('js-quote-text').textContent = x;
+}
+</script>
+</body>
+</html>
