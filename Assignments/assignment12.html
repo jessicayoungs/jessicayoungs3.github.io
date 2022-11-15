@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Is this your phone number?</h1>
+     <label id = "xlabel"></label><br>
+     <button type="button" id="noButton">No</button> 
+     <button ondblclick="myalert()">
+        Yes
+        </button>
+
+    <script>
+ let x;
+    
+document.getElementById("noButton").onclick = function () {
+    x = Math.floor(Math.random() * 9000000000) + 1000000000;
+
+    document.getElementById("xlabel").innerHTML = x;
+}
+
+document.querySelector('.yesButton').addEventListener('click', yes);
+
+function myalert() {
+alert("Your phone number has been submitted!");
+}
+
+    </script>
+</body>
+</html>
